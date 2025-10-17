@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Receptek - Fenntartható Receptek</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Receptek</h1>
+    <nav>
+      <a href="index.html">Főoldal</a>
+      <a href="recipes.html">Receptek</a>
+      <a href="about.html">Rólunk</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Receptlista</h2>
+
+      <label for="filterIngredient">Szűrés összetevő szerint:</label>
+      <input id="filterIngredient" placeholder="pl. paradicsom" />
+      <button id="filterBtn">Szűrés</button>
+      <button id="resetBtn">Összes mutatása</button>
+
+      <ul id="recipeList"></ul>
+
+      <h3>Keresés név szerint</h3>
+      <input id="searchName" placeholder="pl. Ratatouille" />
+      <button id="searchBtn">Keres</button>
+      <div id="searchResult"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Fenntartható Receptek</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // eseménykezelők
+    document.getElementById('filterBtn').addEventListener('click', () => {
+      const term = document.getElementById('filterIngredient').value.trim();
+      const filtered = filterByIngredient(term); // paraméteres függvény
+      renderRecipes(filtered);
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      renderRecipes(recipes);
+    });
+
+    document.getElementById('searchBtn').addEventListener('click', () => {
+      const term = document.getElementById('searchName').value.trim();
+      const found = findRecipeByName(term); // keresés tétel
+      const out = document.getElementById('searchResult');
+      if (found) out.innerHTML = `<p>Keresés eredménye: <strong>${found.name}</strong> — ${found.calories} kcal</p>`;
+      else out.innerHTML = `<p>Nincs találat.</p>`;
+    });
+
+    // kezdeti render
+    renderRecipes(recipes);
+  </script>
+</body>
+</html>

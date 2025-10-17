@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fenntartható Receptek - Kezdőlap</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Fenntartható Receptek</h1>
+    <nav>
+      <a href="index.html">Főoldal</a>
+      <a href="recipes.html">Receptek</a>
+      <a href="about.html">Rólunk</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Üdv a zöld konyhában!</h2>
+      <p>Egyszerű, fenntartható receptek növényi alapú alternatívákkal.</p>
+      <button id="show-summary">Nézd meg a recept összegzését</button>
+      <div id="summary"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Fenntartható Receptek</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // rövid inline teszt — használja a main.js függvényeit
+    document.getElementById('show-summary').addEventListener('click', () => {
+      const numbers = [100, 250, 300];
+      // sumCalories demonstrálása (összegzés tétel)
+      const total = sumCalories(numbers);
+      const el = document.getElementById('summary');
+      el.innerHTML = `<p>3 recept összesen: ${total} kcal</p>`;
+    });
+  </script>
+</body>
+</html>
