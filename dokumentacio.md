@@ -1,76 +1,43 @@
-# Dokumentáció
+# Dokumentáció — Fenntartható Receptek
 
-## Téma: Újpest bemutató weboldal
+## Projekt neve a GitHubon
+`teljesenvedkisbetuvel_8E2D0F39` (publikus repozitórium)
 
-A weboldal az Újpest FC csapatát mutatja be.  
-A cél egy egyszerű, informatív és interaktív weboldal létrehozása volt, amely három fő részből áll:  
-- a főoldal (bemutatás és navigáció),  
-- a „Rólunk” oldal (történelem, stadion, eredmények),  
-- és a „Játékosok” oldal (interaktív táblázat és JavaScript funkciók).  
+## Miről szól a weboldal?
+Ez a weboldal egyszerű, oktatási céllal készült demo: fenntartható, növényi alapú recepteket mutat be. A cél kettős: bemutatni néhány receptet és demonstrálni a webprogramozás alapfogalmait JavaScript használatával.
 
-A weboldal reszponzív kialakítású, vagyis mobilon és asztali gépen is megfelelően jelenik meg.
+## Milyen technológiákkal készült?
+- HTML (3 statikus oldal: `index.html`, `recipes.html`, `about.html`)
+- CSS (egyszerű stílus a `css/styles.css`-ben)
+- JavaScript (fő logika a `js/main.js`-ben, kliensoldali)
+- Nincs szükség szerveroldali kódra; a repo publikusan GitHub Pages-sel is kiexportálható.
 
----
+## Az egyes részek és függvények rövid leírása
+- `index.html` — főoldal, gyors összegzést jelenít meg (példa: kalóriaszámítás).
+- `recipes.html` — receptlista; szűrés összetevő alapján; név szerinti keresés.
+- `about.html` — leírás a projektről és használt technológiákról.
+- `css/styles.css` — egyszerű, letisztult stílus.
+- `js/main.js` — minden logika:
+  - `recipes` — tömb, tartalmazza a receptobjektumokat.
+  - `renderRecipes(list)` — kirajzolja a receptlistát a DOM-ba.
+  - `filterByIngredient(term)` — paraméteres függvény; visszaadja a recepteket, amelyek tartalmazzák a megadott összetevőt (tömb + ciklus + logika).
+  - `sumCalories(arrayOfCalories)` — összegzi a megadott kalóriaszámokat (programozási tétel: **összegzés**).
+  - `findRecipeByName(name)` — név alapján keres (programozási tétel: **keresés**).
+  - `isVegan(recipe)` — egyszerű logikai ellenőrzés (van-e nem-vegán összetevő).
+  - `findMaxCalories(list)` — visszaadja a legmagasabb kalóriájú receptet (programozási tétel: **maximum keresés**).
+  - `addNumbers(a, b)` — bemutató aritmetikai függvény (paraméteres).
 
-## Felhasznált technológiák
+## Hol találhatók a követelmények?
+1. **Legalább 3 oldal:** `index.html`, `recipes.html`, `about.html`.
+2. **Legalább 4 JS függvény:** több, például `renderRecipes`, `filterByIngredient`, `sumCalories`, `findRecipeByName`, `isVegan`, `findMaxCalories`, `addNumbers`.
+3. **Kötelező elemek:**
+   - aritmetikai műveletek: `addNumbers` és `sumCalories`.
+   - logikai műveletek: `isVegan` (boolean logika).
+   - elágazás: `if` használat több helyen.
+   - tömb: `recipes`.
+   - ciklus: `for` ciklusok használata.
+   - függvény: fentiek.
+4. **Programozási tétel alkalmazása:** `sumCalories` (összegzés), `findRecipeByName` (keresés), `findMaxCalories` (maximum) — legalább egy tétel teljesül.
 
-- **HTML** – az oldal szerkezete (több lapos felépítés, menü, képek)
-- **CSS** – a stílusok, elrendezés és animációk (grid, flexbox, hover-effektek, media query)
-- **JavaScript** – az interaktív funkciók, számítások és adatszűrés megvalósítására
-
----
-
-## Oldalak és funkciók
-
-### 1. `index.html`
-- A főoldal, amely tartalmaz egy menüt, hősrészt és három információs kártyát.  
-- A menüben almenük is találhatók (pl. a „Rólunk” menüpont alatt).  
-- CSS animációval mozgó képet tartalmaz.  
-
-### 2. `about.html`
-- A csapat történetét, stadionját és eredményeit mutatja be.  
-- Három alcímre van tagolva, hogy a menü almenüi működjenek.  
-
-### 3. `players.html`
-- Interaktív oldal, ahol:
-  - névre vagy pozícióra lehet **keresni** a játékosok között,
-  - különböző **aritmetikai és logikai műveletek** hajthatók végre (összegzés, maximum keresés),
-  - több **JavaScript függvény** kerül bemutatásra.  
-
----
-
-## JavaScript függvények
-
-| Függvény neve | Leírás | Programozási tétel / művelet |
-|----------------|--------|------------------------------|
-| `add(a, b)` | Két szám összeadása. | Aritmetikai művelet |
-| `isEven(n)` | Ellenőrzi, hogy egy szám páros-e. | Logikai művelet + elágazás |
-| `filterPlayers(query)` | Keresés a játékosok között név vagy pozíció alapján. | Keresés / kiválasztás tétel |
-| `findMaxNumber(arr)` | Megkeresi a tömb legnagyobb elemét ciklus segítségével. | Maximum keresés |
-| `sumArray(arr)` | Összegzi a tömb elemeit. | Összegzés tétel |
-
----
-
-## Alkalmazott programozási tételek
-
-- **Összegzés** (`sumArray`)
-- **Maximum keresés** (`findMaxNumber`)
-- **Keresés/kiválasztás** (`filterPlayers`)
-
-Mindhárom tétel jól elkülöníthető a `script.js` fájlban, a kód egyszerű, oktatási célra készült.
-
----
-
-## Összegzés
-
-A weboldal megfelel a projekt követelményeinek:
-- Legalább **3 oldalból** áll.  
-- **4+ különböző JavaScript függvényt** tartalmaz, paraméteres is van.  
-- Használ **aritmetikai és logikai műveletet**, **tömböt**, **ciklust**, **elágazást** és **függvényeket**.  
-- Tartalmaz **animációt**, **media query-t**, és **reszponzív elrendezést**.  
-- A forrásfájlok áttekinthetők, a GitHub feltöltéshez készek.
-
----
-
-**Repo neve:**  
-`teljesenvedkisbetuvel_8E2D0F39`
+## Használati útmutató (lokális futtatás)
+1. Másold le a fájlokat a repóból egy mappába:
