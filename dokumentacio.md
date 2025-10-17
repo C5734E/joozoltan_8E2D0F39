@@ -39,5 +39,18 @@ Ez a weboldal egyszerű, oktatási céllal készült demo: fenntartható, növé
    - függvény: fentiek.
 4. **Programozási tétel alkalmazása:** `sumCalories` (összegzés), `findRecipeByName` (keresés), `findMaxCalories` (maximum) — legalább egy tétel teljesül.
 
-## Használati útmutató (lokális futtatás)
-1. Másold le a fájlokat a repóból egy mappába:
+
+**AI által adott output (példa rövid összefoglaló):**
+- A fenti prompt alapján a következő fájlokat generálta az AI: `index.html`, `recipes.html`, `about.html`, `css/styles.css`, `js/main.js`, `dokumentacio.md`.
+- A JS tartalmaz több példafüggvényt: `sumCalories` (összegzés), `findRecipeByName` (keresés), `findMaxCalories` (maximum), `filterByIngredient` (tömb+ciklus), stb.
+
+(Ne felejtsd el a saját munkáddal összevetni és eldönteni, mennyit vettél át: a leadott feladatnál az önállóságot értékelik.)
+
+## Licenc / források
+Saját munka / oktatási célra. Ha részleteket AI generálta, azt a dokumentációban feltüntettem.
+
+## Jegyzet a beadáshoz
+- A GitHub repo neve pontosan legyen: `teljesenvedkisbetuvel_8E2D0F39`
+- Töltsd fel a fájlokat a repo gyökérébe (könyvtárstruktúra: `index.html`, `recipes.html`, `about.html`, `css/`, `js/`, `dokumentacio.md`).
+
+
