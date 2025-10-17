@@ -1,7 +1,7 @@
 # Dokumentáció — Fenntartható Receptek
 
 ## Projekt neve a GitHubon
-`teljesenvedkisbetuvel_8E2D0F39` (publikus repozitórium)
+`joozoltan_8E2D0F39` (publikus repozitórium)
 
 ## Miről szól a weboldal?
 Ez a weboldal egyszerű, oktatási céllal készült demo: fenntartható, növényi alapú recepteket mutat be. A cél kettős: bemutatni néhány receptet és demonstrálni a webprogramozás alapfogalmait JavaScript használatával.
